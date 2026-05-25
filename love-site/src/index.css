@@ -1,0 +1,36 @@
+
+
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap');
+
+.font-display { font-family: 'Cormorant Garamond', serif; }
+.font-script  { font-family: 'Great Vibes', cursive; }
+.font-body    { font-family: 'Jost', sans-serif; }
+
+@keyframes heartbeat   { 0%,100%{transform:scale(1)} 50%{transform:scale(1.25)} }
+@keyframes floatUp     { 0%{transform:translateY(0)} 100%{transform:translateY(-12px)} }
+@keyframes popIn       { 0%{transform:scale(0) rotate(-15deg);opacity:0} 65%{transform:scale(1.15) rotate(4deg)} 82%{transform:scale(.93) rotate(-2deg)} 100%{transform:scale(1) rotate(0);opacity:1} }
+@keyframes slideUp     { from{transform:translateY(48px);opacity:0} to{transform:none;opacity:1} }
+@keyframes fadeIn      { from{opacity:0} to{opacity:1} }
+@keyframes drift       { 0%{transform:translateY(100vh) scale(.5);opacity:0} 8%{opacity:.35} 90%{opacity:.18} 100%{transform:translateY(-120px) scale(1.3) rotate(20deg);opacity:0} }
+@keyframes musicBounce { 0%,100%{transform:scale(1) rotate(0)} 30%{transform:scale(1.12) rotate(-9deg)} 65%{transform:scale(1.06) rotate(7deg)} }
+@keyframes confetti    { to{transform:translateY(-70vh) rotate(720deg);opacity:0} }
+@keyframes spinSlow    { to{transform:rotate(360deg)} }
+
+.anim-heartbeat   { animation: heartbeat   1s ease-in-out infinite; }
+.anim-floatUp     { animation: floatUp     2.5s ease-in-out infinite alternate; }
+.anim-popIn       { animation: popIn       .55s cubic-bezier(.36,.07,.19,.97) both; }
+.anim-slideUp     { animation: slideUp     .5s ease both; }
+.anim-fadeIn      { animation: fadeIn      .4s ease both; }
+.anim-drift       { animation: drift       linear infinite; }
+.anim-musicBounce { animation: musicBounce 2s ease-in-out infinite; }
+.anim-confetti    { animation: confetti    1.2s ease-out forwards; }
+.anim-spinSlow    { animation: spinSlow    3s linear infinite; }
+
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #9b1d3a; border-radius: 2px; }
