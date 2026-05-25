@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import HeartsCanvas from "./components/HeartsCanvas";
 import Nav from "./components/Nav";
@@ -14,6 +14,9 @@ import PlaylistOverlay from "./components/overlays/PlaylistOverlay";
 import ReasonsOverlay from "./components/overlays/ReasonsOverlay";
 import SurpriseOverlay from "./components/overlays/SurpriseOverlay";
 
+// ── Replace this with your real Cloudinary (or any direct) MP3 URL ──
+const SONG_URL = "https://res.cloudinary.com/dsiv18gva/video/upload/v1779714404/song_hhpxfb.mp3";
+
 /* ── Confetti burst helper ── */
 function ConfettiPiece({ style }) {
   const icons = ["❤️", "🌹", "💕", "💖", "✨"];
@@ -25,9 +28,33 @@ function ConfettiPiece({ style }) {
 }
 
 export default function BirthdayLoveSite() {
-  const [overlay, setOverlay]   = useState(null); // 'heart' | 'letter' | 'playlist' | 'reasons' | 'surprise'
+  const [overlay, setOverlay]   = useState(null);
   const [musicOn, setMusicOn]   = useState(false);
   const [confetti, setConfetti] = useState([]);
+  const audioRef                = useRef(null);
+
+  // Set up audio on mount, clean up on unmount
+  useEffect(() => {
+    const audio = new Audio(SONG_URL);
+    audio.loop = true;
+    audioRef.current = audio;
+    return () => {
+      audio.pause();
+      audio.src = "";
+    };
+  }, []);
+
+  function handleMusicToggle() {
+    if (!audioRef.current) return;
+    if (musicOn) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(() => {
+        // Browser blocked autoplay — user must interact first, which they did
+      });
+    }
+    setMusicOn((p) => !p);
+  }
 
   function handleFinalSurprise() {
     const pieces = Array.from({ length: 32 }, (_, i) => ({
@@ -48,15 +75,17 @@ export default function BirthdayLoveSite() {
   return (
     <div className="font-body bg-[#0a0608] text-[#f5e8ec] min-h-screen overflow-x-hidden">
 
-      {/* Ambient layer */}
+      {/* Ambient floating hearts */}
       <HeartsCanvas />
 
       {/* Confetti burst */}
-      {confetti.map((c) => <ConfettiPiece key={c.id} style={c.style} />)}
+      {confetti.map((c) => (
+        <ConfettiPiece key={c.id} style={c.style} />
+      ))}
 
       {/* Floating music FAB */}
       <button
-        onClick={() => setMusicOn((p) => !p)}
+        onClick={handleMusicToggle}
         title="Play our song"
         className="fixed bottom-7 right-7 z-[200] w-12 h-12 rounded-full bg-rose-500
           shadow-[0_4px_24px_rgba(232,67,106,.45)] flex items-center justify-center
@@ -65,8 +94,8 @@ export default function BirthdayLoveSite() {
         {musicOn ? "🔊" : "🎵"}
       </button>
 
-      {/* Sections */}
-      <Nav musicOn={musicOn} onMusicToggle={() => setMusicOn((p) => !p)} />
+      {/* Page sections */}
+      <Nav musicOn={musicOn} onMusicToggle={handleMusicToggle} />
       <Hero />
       <Memories />
       <EmojiSection onOpen={setOverlay} />
