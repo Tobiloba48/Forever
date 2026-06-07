@@ -8,7 +8,7 @@ export default function PlaylistOverlay({ open, onClose }) {
         <div className="text-6xl mb-4">🎶</div>
         <div className="font-script text-[2.2rem] text-pink-400 mb-2">Our Playlist</div>
         <p className="text-neutral-400 text-sm leading-relaxed mb-7">
-          8 songs I handpicked — every one reminds me of you, of us,
+          7 songs I handpicked — every one reminds me of you, of us,
           of this beautiful thing we have.
         </p>
         <a

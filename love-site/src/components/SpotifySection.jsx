@@ -55,7 +55,7 @@ export default function SpotifySection() {
                   <span className="text-[11px] text-neutral-600 w-3 text-right">{t.n}</span>
                   <span className="flex-1 text-[13px] text-white/90">{t.title}</span>
                   <span className="text-[11px] text-neutral-500">{t.artist}</span>
-                  <span className="text-[11px] text-neutral-500 min-w-[30px] text-right">{t.dur}</span>
+                  <span className="text-[11px] text-neutral-500 min-w-7.5 text-right">{t.dur}</span>
                 </div>
               ))}
               <div className="text-[11px] text-neutral-600 mt-2 text-center">… and more</div>

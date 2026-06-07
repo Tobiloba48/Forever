@@ -71,10 +71,10 @@ export const REASONS = [
 ];
 
 export const TRACKS = [
-  { n: 1, title: "Perfect",           artist: "Ed Sheeran",          dur: "4:23" },
-  { n: 2, title: "All of Me",         artist: "John Legend",          dur: "4:30" },
-  { n: 3, title: "Until I Found You", artist: "Stephen Sanchez",      dur: "2:58" },
-  { n: 4, title: "Best Part",         artist: "Daniel Caesar, H.E.R.", dur: "3:29" },
+  { n: 1, title: "I Choose You",           artist: "Sudnalro Soul",          dur: "4:23" },
+  { n: 2, title: "You're Still The One",         artist: "Shania Twain",          dur: "4:30" },
+  { n: 3, title: "Perfect", artist: "Ed Sheeran",      dur: "2:58" },
+  { n: 4, title: "All of Me",         artist: "John Legend", dur: "3:29" },
 ];
 
 export const EMOJIS = [
