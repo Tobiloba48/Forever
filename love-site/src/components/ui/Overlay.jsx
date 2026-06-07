@@ -18,7 +18,7 @@ export default function Overlay({ open, onClose, children }) {
 
   return (
     <div
-      className="fixed inset-0 z-[500] flex items-center justify-center anim-fadeIn"
+      className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto py-16 anim-fadeIn"
       style={{ background: "rgba(5,2,4,.93)", backdropFilter: "blur(10px)" }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >

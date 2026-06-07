@@ -1,19 +1,51 @@
-import img2016 from '../assets/2019.jpeg'
-import img2018 from '../assets/2018.jpeg'
+import img2018 from '../assets/2019.jpeg'
 import img2020 from '../assets/2020.jpeg'
-import img2022 from '../assets/2020.jpeg'
-import img2024 from '../assets/2020.jpeg'
+import img2022 from '../assets/2022.jpeg'
+import img2024 from '../assets/2024.png'
+import img2025 from '../assets/2025.jpeg'
+import img2026 from '../assets/20266.jpeg'
 
 export const SPOTIFY_URL = "https://open.spotify.com/playlist/5aZ9inaS16kcB00ZpQTWMK?si=4Qii9QfhRG-L6wBJ4N5xZA";
 
 
 export const MEMORIES = [
-  { year: "2016", caption: "The day everything started",       bg: "from-rose-950 to-neutral-950",  img: img2016 },
-  { year: "2018", caption: "Making memories together",         bg: "from-emerald-950 to-neutral-950", img: img2018 },
-  { year: "2020", caption: "Through every season, we stayed",  bg: "from-amber-950 to-neutral-950",  img: img2020 },
-  { year: "2022", caption: "More love, more laughter",         bg: "from-sky-950 to-neutral-950",    img: img2022 },
-  { year: "2024", caption: "8 years down, forever to go",      bg: "from-fuchsia-950 to-neutral-950", img: img2024 },
-]
+  {
+    year: "2018",
+    caption: "The day everything started",
+    bg: "from-rose-950 to-neutral-950",
+    img: img2018,
+  },
+  {
+    year: "2020",
+    caption: "Making memories together",
+    bg: "from-emerald-950 to-neutral-950",
+    img: img2020,
+  },
+  {
+    year: "2022",
+    caption: "Through every season, we stayed",
+    bg: "from-amber-950 to-neutral-950",
+    img: img2022,
+  },
+  {
+    year: "2024",
+    caption: "More love, more laughter",
+    bg: "from-sky-950 to-neutral-950",
+    img: img2024,
+  },
+  {
+    year: "2025",
+    caption: "8 years down, forever to go",
+    bg: "from-fuchsia-950 to-neutral-950",
+    img: img2025,
+  },
+  {
+    year: "2026",
+    caption: "8 years down, forever to go",
+    bg: "from-fuchsia-950 to-neutral-950",
+    img: img2026,
+  },
+];
 
 export const REASONS = [
   "The way you laugh at your own jokes before the punchline",
