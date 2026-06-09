@@ -24,7 +24,7 @@ export default function Overlay({ open, onClose, children }) {
     >
       <button
         onClick={onClose}
-        className="absolute top-6 right-7 text-3xl text-neutral-500 hover:text-white transition-colors leading-none font-body"
+        className="absolute top-6 right-7 z-600 text-3xl text-neutral-500 hover:text-white transition-colors leading-none font-body"
       >
         ✕
       </button>
