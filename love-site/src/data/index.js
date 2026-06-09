@@ -48,7 +48,7 @@ export const MEMORIES = [
 ];
 
 export const REASONS = [
-  "The way you laugh at your own jokes before the punchline",
+  "The way you show genuine care through your actions.",
   "How you always know when I need a hug without me saying a word",
   "Your ridiculously contagious smile",
   "The way your eyes light up when you talk about things you love",
@@ -64,7 +64,7 @@ export const REASONS = [
   "How you make me want to be a better person just by being you",
   "The little habits that have become my favourite things",
   "Your warmth — rooms actually feel warmer when you're in them",
-  "How hard you work every single day, without complaint",
+  "The way you bring peace and happiness into our lives",
   "The way you hold my hand like you mean it",
   "How you make me feel at home wherever we are",
   "Simply — you. All of you. Every single part.",
